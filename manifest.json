@@ -1,0 +1,27 @@
+{
+  "manifest_version": 3,
+  "name": "Youtube Comments Translator",
+  "description": "Translate YouTube comments to any language.",
+  "version": "1.0",
+  "permissions": [
+    "activeTab",
+    "storage"
+  ],
+  "action": {
+    "default_popup": "popup.html",
+    "default_icon": "smile.png"
+  },
+  "icons": {
+    "48": "smile.png"
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "https://*.youtube.com/*"
+      ],
+      "js": [
+        "content.js"
+      ]
+    }
+  ]
+}
